@@ -21,3 +21,13 @@ addToCollection('Thelonious Monk With John Coltrane', 'Thelonious Monk & John Co
 addToCollection('The Infotainment Scan', 'The Fall', 1993);
 
 console.log( 'my record collections contains:', collection );
+
+function showCollection(array){
+  console.log( 'in showCollection:', array );
+  console.log( 'The length of this collection is:', array.length );
+  for(item of array){
+    console.log( item.title + ' by ' + item.artist + ', published in ' + item.yearPublished );
+  } // end for of loop
+} // end showCollection
+
+showCollection(collection);
