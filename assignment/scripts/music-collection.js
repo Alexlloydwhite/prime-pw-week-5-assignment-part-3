@@ -31,3 +31,19 @@ function showCollection(array){
 } // end showCollection
 
 showCollection(collection);
+
+function findByArtist(artist){
+  console.log( 'in findByArtist:', artist );
+  let array = [];
+  for(item of collection){
+    if(item.artist === artist){
+      array.push(item);
+      return array;
+    } //end if
+    else {
+      return [];
+    } // end else
+  } // end for of loop
+} // end findByArtist
+
+console.log( findByArtist('Talking Heads') );
