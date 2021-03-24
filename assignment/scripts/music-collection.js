@@ -35,7 +35,7 @@ function showCollection(array){
 
 showCollection(collection);
 
-console.log('************* Find By Artist Function');
+console.log('************* Find By Artist Function')
 
 function findByArtist(artist){
   console.log( 'in findByArtist:', artist );
@@ -52,3 +52,15 @@ console.log( findByArtist('Devo') );
 console.log( findByArtist('The Fall') );
 
 console.table(collection);
+
+console.log('************* Stretch Goal: Search Function')
+
+function search(object){
+  console.log( 'in search:', object );
+  let array = [];
+  for(item of collection){
+    if(item === object){
+      array.push(item);
+    } // end if
+  } return array; // end for of loop
+} // end search function
