@@ -19,7 +19,6 @@ addToCollection('Stop Making Sense', 'Talking Heads', 1984);
 addToCollection('Light Up Gold + Tally All The Things You Broke', 'Parquet Courts', 2013);
 addToCollection('Thelonious Monk With John Coltrane', 'Thelonious Monk & John Coltrane', 1961);
 addToCollection('The Infotainment Scan', 'The Fall', 1993);
-
 console.log( 'my record collections contains:', collection );
 
 function showCollection(array){
@@ -31,19 +30,18 @@ function showCollection(array){
 } // end showCollection
 
 showCollection(collection);
+console.table(collection);
 
 function findByArtist(artist){
   console.log( 'in findByArtist:', artist );
   let array = [];
   for(item of collection){
-    if(item.artist === artist){
+    if(artist === item.artist){
       array.push(item);
-      return array;
-    } //end if
-    else {
-      return [];
     } // end else
-  } // end for of loop
+  } return array; // end for of loop
 } // end findByArtist
 
 console.log( findByArtist('Talking Heads') );
+console.log( findByArtist('Devo') );
+console.log( findByArtist('The Fall') );
