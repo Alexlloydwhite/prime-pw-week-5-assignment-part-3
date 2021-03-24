@@ -1,4 +1,6 @@
-console.log('***** Music Collection *****')
+console.log('***** Music Collection *****');
+
+console.log('************* Add To Collection Function');
 
 let collection = [];
 
@@ -21,6 +23,8 @@ addToCollection('Thelonious Monk With John Coltrane', 'Thelonious Monk & John Co
 addToCollection('The Infotainment Scan', 'The Fall', 1993);
 console.log( 'my record collections contains:', collection );
 
+console.log('************* Show Collection Function');
+
 function showCollection(array){
   console.log( 'in showCollection:', array );
   console.log( 'The length of this collection is:', array.length );
@@ -30,7 +34,8 @@ function showCollection(array){
 } // end showCollection
 
 showCollection(collection);
-console.table(collection);
+
+console.log('************* Find By Artist Function');
 
 function findByArtist(artist){
   console.log( 'in findByArtist:', artist );
@@ -38,10 +43,12 @@ function findByArtist(artist){
   for(item of collection){
     if(artist === item.artist){
       array.push(item);
-    } // end else
+    } // end if
   } return array; // end for of loop
 } // end findByArtist
 
 console.log( findByArtist('Talking Heads') );
 console.log( findByArtist('Devo') );
 console.log( findByArtist('The Fall') );
+
+console.table(collection);
