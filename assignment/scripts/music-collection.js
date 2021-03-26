@@ -54,19 +54,21 @@ console.log( findByArtist('The Fall') );
 console.table(collection);
 
 console.log('************* Stretch Goal: Search Function')
-//
-// let criteria ={
-//   title:
-//   artist:
-//   yearPublished:
-// }
-// function search(criteria){
-//   console.log( 'in search:', criteria );
-//
-//   let array = [];
-//   for(item of collection){
-//     if(item === criteria){
-//       array.push(item);
-//     } // end if
-//   } return array; // end for of loop
-// } // end search function
+// Create a function called search. This function should:
+// Take an input parameter for a search criteria object. The search criteria might look sosomething like this:
+// { artist: 'Ray Charles', year: 1957 }
+// Return a new array of all items in the collection matching all of the search criteria.
+// If no results are found, return an empty array.
+// If there is no search object or an empty search object provided as input, then return all albums in the collection.
+
+function search(criteria){
+  let artist = criteria.artist
+  let title = criteria.title
+  let year = criteria.year
+
+
+
+
+
+
+}
