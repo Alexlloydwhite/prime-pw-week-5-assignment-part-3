@@ -28,19 +28,19 @@ console.log('************* Show Collection Function');
 function showCollection(array){
   console.log( 'in showCollection:', array );
   console.log( 'The length of this collection is:', array.length );
-  for(item of array){
+  for(let item of array){
     console.log( item.title + ' by ' + item.artist + ', published in ' + item.yearPublished );
   } // end for of loop
 } // end showCollection
 
 showCollection(collection);
 
-console.log('************* Find By Artist Function')
+console.log('************* Find By Artist Function');
 
 function findByArtist(artist){
   console.log( 'in findByArtist:', artist );
   let array = [];
-  for(item of collection){
+  for(let item of collection){
     if(artist === item.artist){
       array.push(item);
     } // end if
@@ -54,13 +54,19 @@ console.log( findByArtist('The Fall') );
 console.table(collection);
 
 console.log('************* Stretch Goal: Search Function')
-
-function search(object){
-  console.log( 'in search:', object );
-  let array = [];
-  for(item of collection){
-    if(item === object){
-      array.push(item);
-    } // end if
-  } return array; // end for of loop
-} // end search function
+//
+// let criteria ={
+//   title:
+//   artist:
+//   yearPublished:
+// }
+// function search(criteria){
+//   console.log( 'in search:', criteria );
+//
+//   let array = [];
+//   for(item of collection){
+//     if(item === criteria){
+//       array.push(item);
+//     } // end if
+//   } return array; // end for of loop
+// } // end search function
