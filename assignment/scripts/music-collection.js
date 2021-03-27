@@ -61,14 +61,18 @@ console.log('************* Stretch Goal: Search Function')
 // If no results are found, return an empty array.
 // If there is no search object or an empty search object provided as input, then return all albums in the collection.
 
-function search(criteria){
-  let artist = criteria.artist
-  let title = criteria.title
-  let year = criteria.year
+function search(artist, year){
+  console.log('in search:', artist, year);
+  let results = [];
+  let searchCriteria = {
+    artist: artist,
+    year: year
+  } // end searchCriteria object
+for(let item of collection){
+  if(searchCriteria.artist === item.artist & searchCriteria.year === item.yearPublished){
+    results.push(item)
+  } // end if
+} return results //end for of loop
+} // end search
 
-
-
-
-
-
-}
+console.log( search('Talking Heads', 1984) );
