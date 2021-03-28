@@ -60,20 +60,19 @@ console.log('************* Stretch Goal: Search Function')
 // Return a new array of all items in the collection matching all of the search criteria.
 // If no results are found, return an empty array.
 // If there is no search object or an empty search object provided as input, then return all albums in the collection.
+// function search(artist, title){
+//   console.log('in search:', artist, title);
+//   let results = [];
+//   let searchCriteria = {
+//     artist: artist,
+//     title: title
+//   } // end searchCriteria object
+// for(let item of collection){
+//   if(searchCriteria.artist === item.artist & searchCriteria.title === item.title){
+//     results.push(item)
+//   } // end if
+// } return results //end for of loop
+// } // end search
 
-function search(artist, title){
-  console.log('in search:', artist, title);
-  let results = [];
-  let searchCriteria = {
-    artist: artist,
-    title: title
-  } // end searchCriteria object
-for(let item of collection){
-  if(searchCriteria.artist === item.artist & searchCriteria.title === item.title){
-    results.push(item)
-  } // end if
-} return results //end for of loop
-} // end search
-
-console.log( search('Talking Heads', 'Stop Making Sense') );
-console.log( search('Talking Heads', 'Remain in Light') );
+// console.log( search('Talking Heads', 'Stop Making Sense') );
+// console.log( search('Talking Heads', 'Remain in Light') );
